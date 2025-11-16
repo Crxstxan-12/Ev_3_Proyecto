@@ -1,0 +1,57 @@
+
+  .auth-container {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+    padding: 40px 20px;
+  }
+  .auth-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.20);
+    padding: 40px 35px;
+    animation: fadeIn 0.45s ease-in-out;
+  }
+  .auth-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+  }
+  .auth-subtitle {
+    color: #6c757d;
+    font-size: 0.95rem;
+  }
+  .brand-mark {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
+  .form-control {
+    border-radius: 10px;
+    padding: 10px 14px;
+  }
+  .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: none;
+  }
+  .btn-login {
+    padding: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .errorlist li {
+    list-style: none;
+    color: #dc3545;
+    font-size: 0.9rem;
+  }

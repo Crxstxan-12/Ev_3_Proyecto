@@ -1,0 +1,230 @@
+/* e:\Analista Programador\Ev_3_Proyecto\Ev_3_Proyecto\static\css\app.css */
+:root {
+  --brand: #0d6efd;
+  --brand-dark: #0b5ed7;
+  --bg: #f8f9fb;
+  --text: #212529;
+  --muted: #6c757d;
+  --success: #198754;
+  --danger: #dc3545;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(0,0,0,.07);
+}
+
+.navbar .nav-link {
+  color: var(--text);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--brand);
+}
+
+
+.container {
+  max-width: 1100px;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+.table {
+  background: #fff;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.table thead th {
+  background: #f1f3f5;
+  font-weight: 600;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,.02);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(13,110,253,.06);
+}
+
+.btn-primary {
+  background-color: var(--brand);
+  border-color: var(--brand);
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-dark);
+  border-color: var(--brand-dark);
+}
+
+.btn-outline-secondary {
+  color: var(--muted);
+  border-color: var(--muted);
+}
+
+.form-control, .form-select {
+  border-radius: .4rem;
+}
+
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 .2rem rgba(13,110,253,.25);
+  border-color: var(--brand);
+}
+
+.alert-success {
+  background-color: #eaf6ee;
+  color: var(--success);
+  border-color: #cfe9d6;
+}
+
+.alert-danger {
+  background-color: #fdecec;
+  color: var(--danger);
+  border-color: #f7c9c9;
+}
+
+.pagination .page-link {
+  color: var(--brand);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--brand);
+  border-color: var(--brand);
+}
+
+.card {
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,.05);
+  border-radius: .6rem;
+}
+
+.card-header {
+  background: #f8f9fa;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.card .btn {
+  border-radius: .4rem;
+}
+
+label {
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: .25rem;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+  padding: .8rem 1rem;
+}
+
+.list-group-item strong {
+  color: var(--muted);
+  min-width: 110px;
+  display: inline-block;
+}
+
+.btn-secondary {
+  background-color: #e9ecef;
+  border-color: #e9ecef;
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background-color: #dfe3e6;
+  border-color: #dfe3e6;
+}
+
+.alert {
+  border-radius: .5rem;
+}
+
+.errorlist {
+  list-style: none;
+  padding-left: 0;
+  margin: .25rem 0 0;
+  color: var(--danger);
+  font-size: .875rem;
+}
+.errorlist li {
+  background: #fdecec;
+  border: 1px solid #f7c9c9;
+  border-radius: .4rem;
+  padding: .4rem .6rem;
+}
+
+.helptext {
+  display: block;
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+form.d-flex input[type="search"] {
+  min-width: 240px;
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: var(--muted);
+  border-color: var(--muted);
+}
+
+.form-control::placeholder {
+  color: #9aa0a6;
+}
+
+main h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.table a {
+  color: var(--brand);
+  text-decoration: none;
+}
+.table a:hover {
+  text-decoration: underline;
+}
+
+.auth {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+}
+
+.auth-title {
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.auth .card {
+  border-radius: .8rem;
+}
+
+.auth .card-body input[type="text"],
+.auth .card-body input[type="password"] {
+  border-radius: .4rem;
+  border: 1px solid #ced4da;
+  padding: .375rem .75rem;
+  width: 100%;
+}
+
+.auth .card-body input[type="text"]:focus,
+.auth .card-body input[type="password"]:focus {
+  box-shadow: 0 0 0 .2rem rgba(13,110,253,.25);
+  border-color: var(--brand);
+  outline: none;
+}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<div class="auth-container">
+  <div class="col-md-5 col-lg-4">
+    <div class="text-center text-white mb-4">
+      <span class="brand-mark mb-3"></span>
+      <h1 class="auth-title text-white mt-3">Mi Registro Completo</h1>
+      <div class="auth-subtitle text-white opacity-75">
+        Bienvenido, ingrese sus credenciales
+      </div>
+    </div>
+    <div class="auth-card">
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+          <div class="alert alert-danger py-2">
+            {% for e in form.non_field_errors %}{{ e }}<br>{% endfor %}
+          </div>
+        {% endif %}
+        <div class="mb-3">
+          {{ form.username.label_tag }}
+          {{ form.username }}
+          {{ form.username.errors }}
+        </div>
+        <div class="mb-3">
+          {{ form.password.label_tag }}
+          {{ form.password }}
+          {{ form.password.errors }}
+        </div>
+        <button class="btn btn-primary w-100 btn-login" type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

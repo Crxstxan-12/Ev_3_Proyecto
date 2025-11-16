@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Detalle Curso{% endblock %}
+{% block content %}
+<h1>{{ object.nombre }}</h1>
+<ul class="list-group">
+  <li class="list-group-item"><strong>Código:</strong> {{ object.codigo }}</li>
+  <li class="list-group-item"><strong>Cupos:</strong> {{ object.cupos }}</li>
+</ul>
+{% endblock %}

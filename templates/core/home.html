@@ -1,0 +1,61 @@
+
+{% extends "base.html" %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<div class="mb-4">
+  <h1 class="display-6">Hola, {{ user.first_name|default:user.username }}</h1>
+  <p class="text-muted">Bienvenido a Mi Registro Completo</p>
+</div>
+
+<div class="row g-3">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h5>Alumnos</h5>
+        <p class="text-muted">Gestión de estudiantes</p>
+        <a class="btn btn-primary" href="{% url 'alumno_list' %}">Ver alumnos</a>
+        {% if perms.alumnos.add_alumno %}
+          <a class="btn btn-outline-secondary ms-2" href="{% url 'alumno_create' %}">Nuevo</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card"><div class="card-body">
+      <h5>Cursos</h5><p class="text-muted">Catálogo y cupos</p>
+      <a class="btn btn-primary" href="{% url 'curso_list' %}">Ver cursos</a>
+      {% if perms.cursos.add_curso %}
+        <a class="btn btn-outline-secondary ms-2" href="{% url 'curso_create' %}">Nuevo</a>
+      {% endif %}
+    </div></div>
+  </div>
+  <div class="col-md-4">
+    <div class="card"><div class="card-body">
+      <h5>Inscripciones</h5><p class="text-muted">Asignación a cursos</p>
+      <a class="btn btn-primary" href="{% url 'inscripcion_list' %}">Ver inscripciones</a>
+      {% if perms.inscripciones.add_inscripcion %}
+        <a class="btn btn-outline-secondary ms-2" href="{% url 'inscripcion_create' %}">Nueva</a>
+      {% endif %}
+    </div></div>
+  </div>
+</div>
+
+<div class="row g-3 mt-3">
+  <div class="col-lg-8">
+    <div class="card"><div class="card-body">
+      <h5>Actividad reciente</h5>
+      <p class="text-muted">Muestra últimos movimientos al integrar contexto</p>
+    </div></div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card"><div class="card-body">
+      <h5>Métricas</h5>
+      <ul class="list-group">
+        <li class="list-group-item">Alumnos: <span class="text-muted">—</span></li>
+        <li class="list-group-item">Cursos: <span class="text-muted">—</span></li>
+        <li class="list-group-item">Inscripciones hoy: <span class="text-muted">—</span></li>
+      </ul>
+    </div></div>
+  </div>
+</div>
+{% endblock %}
