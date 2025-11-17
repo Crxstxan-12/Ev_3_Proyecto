@@ -34,7 +34,8 @@
               <button class="btn btn-outline-danger" type="submit">Salir</button>
             </form>
           {% else %}
-            <a class="btn btn-outline-primary" href="{% url 'login' %}">Ingresar</a>
+            <a class="btn btn-outline-primary me-2" href="{% url 'login' %}">Ingresar</a>
+            <a class="btn btn-primary" href="{% url 'register' %}">Registrarse</a>
           {% endif %}
         </div>
       </div>
